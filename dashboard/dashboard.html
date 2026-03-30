@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Dashboard</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Admin Dashboard · Location Logs</h1>
+
+      <div class="toolbar">
+        <input id="tokenFilter" type="text" placeholder="Filter by token" />
+        <button id="applyFilter">Apply filter</button>
+        <a id="exportCsv" class="button" href="/api/location/export/csv">Export CSV</a>
+        <a class="button" href="/dashboard/map.html">Map view</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Created At</th>
+            <th>Token</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Accuracy (m)</th>
+            <th>IP</th>
+            <th>User Agent</th>
+          </tr>
+        </thead>
+        <tbody id="logsBody"></tbody>
+      </table>
+    </main>
+    <script src="/dashboard/dashboard.js"></script>
+  </body>
+</html>
